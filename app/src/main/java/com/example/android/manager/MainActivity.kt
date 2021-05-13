@@ -10,11 +10,13 @@ import com.example.android.manager.fragments.AssignedTaskFragment
 import com.example.android.manager.fragments.DiscussionFragment
 import com.example.android.manager.fragments.TaskFragment
 import com.example.android.manager.fragments.adapter.ViewPagerAdapter
+import com.google.firebase.auth.FirebaseAuth
 
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
+    val user = FirebaseAuth.getInstance().currentUser
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
